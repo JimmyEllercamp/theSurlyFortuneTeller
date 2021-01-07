@@ -16,11 +16,11 @@ const enemy3 = 'Elon Musk has been spying on you for years.';
 const enemy4 = 'You remember that one kid in your grade 2 class who kinda smelled but always gave you weird looks? He still thinks about you with disdain.';
 const enemy5 = 'Never insult a monkey weilding a sword. They never forgive';
 
-const love1 = '';
-const love2 = '';
-const love3 = '';
-const love4 = '';
-const love5 = '';
+const love1 = 'Nancy, the 42 year old single lady from the corner store next to the train station lights up when she sees you. You are the happiest part of her day.';
+const love2 = 'Never play Fog Of Love with a partner, only ever with a friend. I swear to you on every crystal ball I have, you will end up in a couple fight and hating each other for the rest of the week. You have been warned.';
+const love3 = 'You should message your crush to grab a drink this week. They will say yes.';
+const love4 = 'No matter how lonely you are, watching Cassablanca will always give you an escape.';
+const love5 = 'Get the hell of tinder, it is just as toxic as the last person you blocked and reported on it.';
 
 const day1 = '';
 const day2 = '';
