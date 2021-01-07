@@ -1,4 +1,4 @@
-// Mixed Messages 
+// Mixed Messages 1
 
 console.log('Hello, and welcome to Mixed Messages!\nHave you ever looked a child in the face, and they have asked you to tell them a story, only for you mind to go totally blank because that is a TOTALLY unreasonable request to ask of an adult, and you are in no way prepared?\nWell, here is your solution. The Children\'s Story Prompt Generator! I\'ll give you the first line to take all the work out of thinking of a topic. Here goes!\n \n \n');
 
