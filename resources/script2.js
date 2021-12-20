@@ -1,7 +1,10 @@
 // Mixed Messages 2
 
 console.log('The fortune teller awaits. Continue if you want to learn about your futureeee ooooOOOOOOooooooohhhhhhh\n\n\n');
-const userName = 'my pretty';
+let userName = '';
+if (!userName){
+userName = 'my dear';
+}
 const randomNumber = Math.floor(Math.random() * 5);
 
 const wealth1 = 'Corn is selling well this season. You should plant some crops in your neighbours front yard, they never use it anyway.';
