@@ -6,32 +6,54 @@ if (!userName){
 userName = 'my dear';
 }
 const randomNumber = Math.floor(Math.random() * 5);
+const sassyFortuneTeller = {};
+sassyFortuneTeller.init = () => {
+    eventHandlerFun();
+    generateFortune();
 
-// SUBMIT BUTTON
+}
 
-const button = document.querySelector('span');
-const userInput = document.querySelector('#userName');
-const formElement = document.querySelector('form');
-button.addEventListener('click', (event)=> {
-    // event.preventDefault;
-    userName = userInput.value;
-    if (!userName){
-        userName = 'my dear';
-    }
-    console.log(userName);
-    userInput.value = '';
-})
 
-formElement.addEventListener('submit', (event)=> {
-    event.preventDefault;
-    userName = userInput.value;
-    if (!userName){
-        userName = 'my dear';
-    }
-    console.log(userName);
-    userInput.value = '';
-})
 
+const eventHandlerFun = () => {
+
+    
+    const button = document.querySelector('span');
+    const userInput = document.querySelector('#userName');
+    const formElement = document.querySelector('form');
+    const pElement = document.querySelector('p');
+    const h3Element = document.querySelector('h3');
+    const landingBox = document.querySelector('.landing');
+    
+    
+    // CLICK SUBMIT
+    button.addEventListener('click', (event)=> {
+        userName = userInput.value;
+        if (!userName){
+            userName = 'my dear';
+        }
+        userInput.value = '';
+        h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
+        pElement.innerText = `${answer}`;
+        landingBox.style.display = "none";
+    })
+
+    // ENTER SUBMIT
+
+    formElement.addEventListener('submit', (event)=> {
+        event.preventDefault;
+        userName = userInput.value;
+        if (!userName){
+            userName = 'my dear';
+        }
+        userInput.value = '';
+        h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
+        pElement.innerText = `${answer}`;
+        landingBox.style.display = "none";
+
+    })
+    
+}
 //                                      WEALTH SECTION
 const wealth = {};
 
@@ -45,6 +67,7 @@ wealth.option4 = 'You will have trouble finding your wallet, so try not let it o
 
 wealth.option5 = 'A wealthy asian businessman will offer money for personal modelling photos, and it would be quite a lucrative business but you will slightly hate yourself for doing it.';
 
+const wealthArray = [wealth.option1, wealth.option2, wealth.option3, wealth.option4, wealth.option5];
 
 //                                      ENEMY SECTION
 
@@ -60,6 +83,8 @@ enemy.option4 = 'You remember that one kid in your grade 2 class who kinda smell
 
 enemy.option5 = 'Never insult a monkey weilding a sword. They never forgive';
 
+const enemyArray = [enemy.option1, enemy.option2, enemy.option3, enemy.option4, enemy.option5];
+
 //                                         LOVE SECTION
 
 const love = {};
@@ -74,6 +99,8 @@ love.option4 = 'No matter how lonely you are, watching Cassablanca will always g
 
 love.option5 = 'Get the hell of tinder, it is just as toxic as the last person you blocked and reported on it.';
 
+const loveArray = [love.option1, love.option2, love.option3, love.option4, love.option5];
+
 //                                              DAY SECTION
 
 const day = {};
@@ -87,6 +114,8 @@ day.option3 = `Don't stand underneath windowsills or awnings, and for the love o
 day.option4 = 'There is a good new special at your local bar, you will enjoy it. Go for a nice meal and a glass of something strong with a book, you will have a wonderful night.';
 
 day.option5 = 'You left the stove on.';
+
+const dayArray = [day.option1, day.option2, day.option3, day.option4, day.option5];
 
 
 //                                          WEEK SECTION
@@ -103,6 +132,8 @@ week.option4 = 'There are a family of ducks living in the creek you walk past, a
 
 week.option5 = 'Your lunch today will give you the squirts for the rest of the week.';
 
+const weekArray = [week.option1, week.option2, week.option3, week.option4, week.option5];
+
 
 //                                             YEAR SECTION
 
@@ -118,29 +149,28 @@ year.option4 = `Do you like bread? You should totally be into bread. It's a good
 
 year.option5 = 'You will stub your toe and it will not heal properly for the rest of the year. Sucker.';
 
-// const wealthArray = [wealth1, wealth2, wealth3, wealth4, wealth5];
-// const enemyArray = [enemy1, enemy2, enemy3, enemy4, enemy5];
-// const loveArray = [love1, love2, love3, love4, love5];
-// const dayArray = [day1, day2, day3, day4, day5];
-// const weekArray = [week1, week2, week3, week4, week5];
-// const yearArray = [year1, year2, year3, year4, year5];
+const yearArray = [year.option1, year.option2, year.option3, year.option4, year.option5];
+
 
 const generateFortune = () => {
-    return `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: 
+    return `
 
-    Wealth: ${wealth[randomNumber]}.
+    Wealth: ${wealthArray[randomNumber]}.
 
-    Your foes: ${enemy[randomNumber]}. 
+    Your foes: ${enemyArray[randomNumber]}. 
     
-    Your love life: ${love[randomNumber]}.
+    Your love life: ${loveArray[randomNumber]}.
     
-    Your day: ${day[randomNumber]}.
+    Your day: ${dayArray[randomNumber]}.
     
-    Your week: ${week[randomNumber]}.
+    Your week: ${weekArray[randomNumber]}.
     
-    Your year: ${year[randomNumber]}.`;
+    Your year: ${yearArray[randomNumber]}.`;
 
 }
-// console.log(generateFortune()) 
+
+const answer = generateFortune();
+
 // console.log('\nThat will be $20 and a slice of your pizza thank you..that\'s right...in the jar as well....don\'t WORRY about it just DUMP IT IN I AM SO HUNGRY');
 
+sassyFortuneTeller.init();
