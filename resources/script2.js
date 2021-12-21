@@ -165,8 +165,9 @@ const generateFortune = () => {
     
     Your week: ${weekArray[randomNumber]}.
     
-    Your year: ${yearArray[randomNumber]}.`;
+    Your year: ${yearArray[randomNumber]}.
 
+    That will be $20 and a slice of your pizza thank you..that\'s right...in the jar as well....don\'t WORRY about it just DUMP IT IN I AM SO HUNGRY`;
 }
 
 const answer = generateFortune();

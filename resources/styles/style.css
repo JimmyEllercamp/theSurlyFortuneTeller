@@ -50,4 +50,7 @@ input[type="text"] {
     text-align: start;
     width: 50%;
     margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
