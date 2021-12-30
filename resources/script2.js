@@ -18,12 +18,14 @@ sassyFortuneTeller.init = () => {
 const eventHandlerFun = () => {
 
     
-    const button = document.querySelector('span');
+    const button = document.querySelector('.fake-button');
     const userInput = document.querySelector('#userName');
     const formElement = document.querySelector('form');
     const pElement = document.querySelector('p');
     const h3Element = document.querySelector('h3');
     const landingBox = document.querySelector('.landing');
+    const answerBox = document.querySelector('.answer');
+
     
     
     // CLICK SUBMIT
@@ -36,6 +38,8 @@ const eventHandlerFun = () => {
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
         landingBox.style.display = "none";
+        answerBox.style.display = "flex";
+        
     })
 
     // ENTER SUBMIT
@@ -50,7 +54,7 @@ const eventHandlerFun = () => {
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
         landingBox.style.display = "none";
-
+        answerBox.style.display = "flex";
     })
     
 }
@@ -153,8 +157,8 @@ const yearArray = [year.option1, year.option2, year.option3, year.option4, year.
 
 
 const generateFortune = () => {
-    return `
-
+    return ` I....I see something....
+        
     Wealth: ${wealthArray[randomNumber]}.
 
     Your foes: ${enemyArray[randomNumber]}. 
