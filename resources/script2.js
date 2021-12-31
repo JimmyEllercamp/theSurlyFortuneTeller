@@ -1,9 +1,9 @@
 // Mixed Messages 2
 
-console.log('The fortune teller awaits. Continue if you want to learn about your futureeee ooooOOOOOOooooooohhhhhhh');
+// console.log('The fortune teller awaits. Continue if you want to learn about your futureeee ooooOOOOOOooooooohhhhhhh');
 let userName = '';
 if (!userName){
-userName = 'my dear';
+    userName = 'My dear';
 }
 const randomNumber = Math.floor(Math.random() * 5);
 const sassyFortuneTeller = {};
@@ -25,19 +25,19 @@ const eventHandlerFun = () => {
     const h3Element = document.querySelector('h3');
     const landingBox = document.querySelector('.landing');
     const answerBox = document.querySelector('.answer');
-
+    const contentBox = document.querySelector('.content');
     
     
     // CLICK SUBMIT
     button.addEventListener('click', (event)=> {
-        userName = userInput.value;
+        const userName = userInput.value;
         if (!userName){
-            userName = 'my dear';
+            userName = 'My dear';
         }
         userInput.value = '';
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
-        landingBox.style.display = "none";
+        contentBox.style.display = "none";
         answerBox.style.display = "flex";
         
     })
@@ -46,14 +46,14 @@ const eventHandlerFun = () => {
 
     formElement.addEventListener('submit', (event)=> {
         event.preventDefault;
-        userName = userInput.value;
+        let userName = userInput.value;
         if (!userName){
-            userName = 'my dear';
+            userName = 'dearest';
         }
         userInput.value = '';
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
-        landingBox.style.display = "none";
+        contentBox.style.display = "none";
         answerBox.style.display = "flex";
     })
     
@@ -157,7 +157,7 @@ const yearArray = [year.option1, year.option2, year.option3, year.option4, year.
 
 
 const generateFortune = () => {
-    return ` I....I see something....
+    return ` ${userName}....I....I see something....
         
     Wealth: ${wealthArray[randomNumber]}.
 
@@ -171,7 +171,8 @@ const generateFortune = () => {
     
     Your year: ${yearArray[randomNumber]}.
 
-    That will be $20 and a slice of your pizza thank you..that\'s right...in the jar as well....don\'t WORRY about it just DUMP IT IN I AM SO HUNGRY`;
+    That will be $20 and a slice of your pizza thank you..that's right...in the jar as well....don't WORRY about it just DUMP IT IN
+    Yes, it's a bit gooey in there...sorry.`;
 }
 
 const answer = generateFortune();
