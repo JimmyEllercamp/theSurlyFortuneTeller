@@ -2,9 +2,9 @@
 
 // console.log('The fortune teller awaits. Continue if you want to learn about your futureeee ooooOOOOOOooooooohhhhhhh');
 let userName = 'My dear';
-// if (!userName){
-//     userName = 'My dear';
-// }
+if (!userName){
+    userName = 'My dear';
+}
 const randomNumber = Math.floor(Math.random() * 5);
 const sassyFortuneTeller = {};
 sassyFortuneTeller.init = () => {
@@ -22,7 +22,7 @@ const eventHandlerFun = () => {
     const userInput = document.querySelector('#userName');
     const formElement = document.querySelector('form');
     const pElement = document.querySelector('p');
-    const h3Element = document.querySelector('h3');
+    const h3Element = document.querySelector('.answer h3');
     const landingBox = document.querySelector('.landing');
     const answerBox = document.querySelector('.answer');
     const contentBox = document.querySelector('.content');
@@ -31,14 +31,15 @@ const eventHandlerFun = () => {
     // CLICK SUBMIT
     button.addEventListener('click', (event)=> {
         userName = userInput.value;
-        // if (!userName){
-        //     userName = 'My dear';
-        // }
+        if (!userName){
+            userName = 'My dear';
+        }
         userInput.value = '';
-        h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
+        h3Element.innerText = `${userName}....I....I see something....`;
         pElement.innerText = `${answer}`;
         contentBox.style.display = "none";
         answerBox.style.display = "flex";
+        landingBox.style.margin = "3% 0"
         
     })
 
@@ -47,14 +48,16 @@ const eventHandlerFun = () => {
     formElement.addEventListener('submit', (event)=> {
         event.preventDefault;
         userName = userInput.value;
-        // if (!userName){
-        //     userName = 'dearest';
-        // }
+        if (!userName){
+            userName = 'dearest';
+        }
         userInput.value = '';
-        h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
+        h3Element.innerText = ` ${userName}....I....I see something.... `;
         pElement.innerText = `${answer}`;
         contentBox.style.display = "none";
         answerBox.style.display = "flex";
+        landingBox.style.margin = "3% 0"
+
     })
     
 }
@@ -85,7 +88,7 @@ enemy.option3 = 'Elon Musk has been spying on you for years.';
 
 enemy.option4 = 'You remember that one kid in your grade 2 class who kinda smelled but always gave you weird looks? He still thinks about you with disdain.';
 
-enemy.option5 = 'Never insult a monkey weilding a sword. They never forgive';
+enemy.option5 = 'Never insult a monkey weilding a sword. They never forgive...';
 
 const enemyArray = [enemy.option1, enemy.option2, enemy.option3, enemy.option4, enemy.option5];
 
@@ -158,26 +161,24 @@ const yearArray = [year.option1, year.option2, year.option3, year.option4, year.
 //                                              Telling one's fortune
 
 const generateFortune = () => {
-    return ` ${userName}....I....I see something....
+    return `
         
-    Wealth: ${wealthArray[randomNumber]}.
+    Wealth: ${wealthArray[randomNumber]}
 
-    Your foes: ${enemyArray[randomNumber]}. 
+    Your foes: ${enemyArray[randomNumber]}
     
-    Your love life: ${loveArray[randomNumber]}.
+    Your love life: ${loveArray[randomNumber]}
     
-    Your day: ${dayArray[randomNumber]}.
+    Your day: ${dayArray[randomNumber]}
     
-    Your week: ${weekArray[randomNumber]}.
+    Your week: ${weekArray[randomNumber]}
     
-    Your year: ${yearArray[randomNumber]}.
+    Your year: ${yearArray[randomNumber]}
 
     That will be $20 and a slice of your pizza thank you..that's right...in the jar as well....don't WORRY about it just DUMP IT IN
     Yes, it's a bit gooey in there...sorry.`;
 }
 
 const answer = generateFortune();
-
-// console.log('\nThat will be $20 and a slice of your pizza thank you..that\'s right...in the jar as well....don\'t WORRY about it just DUMP IT IN I AM SO HUNGRY');
 
 sassyFortuneTeller.init();

@@ -56,6 +56,7 @@ body {
     background-image: url(./images/header-1.jpg);
     background-position: center;
     background-size: cover;
+    /* background-repeat:no-repeat; */
 }
 
 
@@ -66,10 +67,11 @@ body {
 }
 
 .landing {
-    height: 100vh;
+    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 10% 0;
     /* background-image: url(./images/header-1.jpg);
     background-position: center;
     background-size: cover; */
@@ -131,7 +133,7 @@ input[type="text"] {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    /* text-align */
+    text-align: center;
 }
 
 .fake-button {
@@ -148,20 +150,27 @@ input[type="text"] {
 .answer {
     text-align: center;
     width: 50%;
-    margin: 5% auto;
+    margin: 3% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color:rgb(255, 253, 227);
     border-radius: 3%;
-    /* height: 650px; */
-    /* overflow: scroll; */
     font-family: 'Quicksand',
     sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
     padding: 3%;
     display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    color: whitesmoke;
 }
 
 
