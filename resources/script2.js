@@ -1,10 +1,10 @@
 // Mixed Messages 2
 
 // console.log('The fortune teller awaits. Continue if you want to learn about your futureeee ooooOOOOOOooooooohhhhhhh');
-let userName = '';
-if (!userName){
-    userName = 'My dear';
-}
+let userName = 'My dear';
+// if (!userName){
+//     userName = 'My dear';
+// }
 const randomNumber = Math.floor(Math.random() * 5);
 const sassyFortuneTeller = {};
 sassyFortuneTeller.init = () => {
@@ -30,10 +30,10 @@ const eventHandlerFun = () => {
     
     // CLICK SUBMIT
     button.addEventListener('click', (event)=> {
-        const userName = userInput.value;
-        if (!userName){
-            userName = 'My dear';
-        }
+        userName = userInput.value;
+        // if (!userName){
+        //     userName = 'My dear';
+        // }
         userInput.value = '';
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
@@ -46,10 +46,10 @@ const eventHandlerFun = () => {
 
     formElement.addEventListener('submit', (event)=> {
         event.preventDefault;
-        let userName = userInput.value;
-        if (!userName){
-            userName = 'dearest';
-        }
+        userName = userInput.value;
+        // if (!userName){
+        //     userName = 'dearest';
+        // }
         userInput.value = '';
         h3Element.innerText = `I have seen your future, ${userName}, In my lovely shiny little ball, that you are not allowed to touch, and this is what it holds: `;
         pElement.innerText = `${answer}`;
@@ -155,6 +155,7 @@ year.option5 = 'You will stub your toe and it will not heal properly for the res
 
 const yearArray = [year.option1, year.option2, year.option3, year.option4, year.option5];
 
+//                                              Telling one's fortune
 
 const generateFortune = () => {
     return ` ${userName}....I....I see something....
