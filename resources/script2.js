@@ -49,7 +49,7 @@ const eventHandlerFun = () => {
         event.preventDefault;
         userName = userInput.value;
         if (!userName){
-            userName = 'dearest';
+            userName = 'My dear';
         }
         userInput.value = '';
         h3Element.innerText = ` ${userName}....I....I see something.... `;
@@ -104,7 +104,7 @@ love.option3 = 'You should message your crush to grab a drink this week. They wi
 
 love.option4 = 'No matter how lonely you are, watching Cassablanca will always give you an escape.';
 
-love.option5 = 'Get the hell of tinder, it is just as toxic as the last person you blocked and reported on it.';
+love.option5 = 'Get the hell off tinder, it is just as toxic as the last person you blocked and reported on it.';
 
 const loveArray = [love.option1, love.option2, love.option3, love.option4, love.option5];
 
