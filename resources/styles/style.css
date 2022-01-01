@@ -127,24 +127,47 @@ input[type="text"] {
     padding: 1%;
     font-family: 'Quicksand', sans-serif;
     background: none;
-    border: 1px solid whitesmoke;
+    border: 2px solid whitesmoke;
     border-radius: 3%;
     color: whitesmoke;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
+    transition-duration: 0.25s;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="text"]:active {
+    background-color: rgb(24, 119, 88);
+    color: rgba(243, 162, 162, 0.986);
+    border: 2px solid rgba(243, 162, 162, 0.986);
+        box-shadow: 3px 3px 5px,
+        -3px -3px 5px;
+
+    transform: scale(1.1);
 }
 
 .fake-button {
-    border: 1px solid whitesmoke;
+    border: 2px solid whitesmoke;
     width: 180px;
     margin: 0 auto;
-    padding: 3px;
+    padding: 10px 3px;
+    border-radius: 5%;
+    transition-duration: .25s;
+    font-weight: 400; 
 }
+
+
+
 .fake-button:hover,
 .fake-button:focus {
     color:rgba(243, 162, 162, 0.986);
+    transform: scale(1.1);
+    border: 2px solid rgba(243, 162, 162, 0.986);
+    background-color:rgb(24, 119, 88);
+    box-shadow: 3px 3px 5px, -3px -3px 5px;
 }
 
 .answer {
@@ -162,6 +185,10 @@ input[type="text"] {
     letter-spacing: 1px;
     padding: 3%;
     display: none;
+}
+
+#fake-button2 {
+    margin: 3% auto;
 }
 
 footer {
