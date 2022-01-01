@@ -26,6 +26,7 @@ const eventHandlerFun = () => {
     const landingBox = document.querySelector('.landing');
     const answerBox = document.querySelector('.answer');
     const contentBox = document.querySelector('.content');
+    const resetButton = document.querySelector('#fake-button2');
     
     
     // CLICK SUBMIT
@@ -58,6 +59,14 @@ const eventHandlerFun = () => {
         answerBox.style.display = "flex";
         landingBox.style.margin = "3% 0"
 
+    })
+
+    // RESET
+
+    resetButton.addEventListener('click', function() {
+        answerBox.style.display = "none";
+        contentBox.style.display = "block";
+        landingBox.style.margin = "10% 0";
     })
     
 }
